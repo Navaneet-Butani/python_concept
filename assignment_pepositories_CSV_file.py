@@ -1,3 +1,4 @@
+# This script is based on Python 3.5
 from urllib.request import urlopen
 import json
 import csv
@@ -34,8 +35,10 @@ for i in item_list:
     if i["language"] == "Python" and i["forks"] >= 200 and i["stargazers_count"]>2000:
         # print(i)
         new_list.append(i)
-    else:
-        print("There is no requested data available.")
+
+
+if len(new_list) == 0:
+    print("There is no requested data available.")
 
 # print(new_list)
 
