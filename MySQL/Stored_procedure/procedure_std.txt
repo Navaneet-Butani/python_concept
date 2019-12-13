@@ -1,0 +1,7 @@
+DELIMITER $$
+USE college $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `get_std`(IN s_id int)
+BEGIN
+select * from student where id = s_id;
+END $$
+DELIMITER ;
